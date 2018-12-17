@@ -1,4 +1,4 @@
-package nsmarinro.signaturelibrary;
+package nsmarinro.librarysignature;
 
 import org.junit.Test;
 

@@ -28,7 +28,7 @@
         android:elevation="0dp"
         android:orientation="vertical">
 
-        <nsmarinro.signaturelibrary.SignatureView
+        <nsmarinro.librarysignature.SignatureView
             android:id="@+id/signatureView"
             android:layout_width="match_parent"
             android:layout_height="300dp" />

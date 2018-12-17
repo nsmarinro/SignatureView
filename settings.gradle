@@ -1,2 +1,2 @@
-include ':app', ':signatureLibrary'
+include ':app',':librarySignature'
 include ':openCVLibrary343'

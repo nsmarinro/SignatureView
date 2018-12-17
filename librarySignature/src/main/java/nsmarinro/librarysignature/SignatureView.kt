@@ -1,4 +1,4 @@
-package nsmarinro.signaturelibrary
+package nsmarinro.librarysignature
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,6 +12,7 @@ import org.opencv.core.CvType
 import org.opencv.core.Mat
 import org.opencv.core.MatOfPoint
 import org.opencv.imgproc.Imgproc
+import java.util.*
 
 open class SignatureView : View {
 

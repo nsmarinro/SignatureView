@@ -36,6 +36,3 @@ dependencies {
 
     implementation project(':openCVLibrary343')
 }
-repositories {
-    mavenCentral()
-}
