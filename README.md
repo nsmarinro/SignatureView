@@ -46,8 +46,8 @@ allprojects {
  * Get signature data
  
  ```signatureClear()``` - Clear Signature<br/> 
- ```getSignatureBitmap()``` - Get Signature without bounding box (Final signature)<br/>
- ```getSignatureBitmap(true)``` - Get Signature with bounding boxes (see the bounding boxes detected)<br/>
+ ```getSignatureBitmap()``` - Get Signature without bounding box (final signature)<br/>
+ ```getSignatureBitmap(true)``` - Get Signature with bounding boxes (draw the bounding boxes detected)<br/>
   ```isSignature()``` - if something is already drawn or not<br/>
  
  
