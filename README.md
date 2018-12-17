@@ -4,6 +4,9 @@ Android library with OpenCV 3.4.3 which provides a signature view that obtain th
 # Android Library Signature View
 Android library with OpenCV 3.4.3 which provides a signature view that obtain the signature of the user with the minimum bounding box. Signature is returned in bitmap.
 
+## Improvement
+You are free for make any improvement. Please share your code improvements.
+
 ## Getting Started
 This Library was developed for minSdkVersion 21 and targetSdkVersion 28 (for now)
 
