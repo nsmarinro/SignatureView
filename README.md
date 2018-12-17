@@ -34,7 +34,7 @@ allprojects {
   
   ## Usage
   
-  See */ExampleActivity* for more detailed code example of how to use the library.
+  See *app/src/main/java/nsmarinro/signatureview/ExampleActivity* for more detailed code example of how to use the library.
   
   * Add signature View
   ```
