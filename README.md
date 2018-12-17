@@ -4,6 +4,8 @@
 * Provides the signature with the minimum bounding box.
 * Signature is returned in bitmap<br/>
 
+<img align="center" width="283" height="448" src="https://user-images.githubusercontent.com/34654924/50117761-dad0cb80-021b-11e9-9267-68dc719295cd.jpeg" hspace="20"> <img align="center" width="283" height="448" src="https://user-images.githubusercontent.com/34654924/50117765-ddcbbc00-021b-11e9-8e42-8ae5f89133d2.jpeg"> 
+
 ## Improvements
 You are free for make any improvement. Please share your code.
 
