@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:1-5:35
 	package
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:3:5-25
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:3:5-25
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:5:5-32
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:5:5-32
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:4:5-31
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml:4:5-31
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
 uses-sdk
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nilss\Documents\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\SignatureView\openCVLibrary343\src\main\AndroidManifest.xml

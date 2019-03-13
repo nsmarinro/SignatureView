@@ -20,8 +20,10 @@ open class SignatureView : View {
     private var mCanvas: Canvas? = null
     private var mPath: Path? = null
     private var mPaint: Paint? = null
+    private var bitmapPaint: Paint? = null
     private var mX: Float = 0F
     private var mY: Float = 0F
+    private var mWith: Double? = null
 
     constructor(context: Context) : super(context) {
         init()
@@ -37,12 +39,15 @@ open class SignatureView : View {
     }
 
     private fun init() {
+        bitmapPaint = Paint(Paint.DITHER_FLAG)
         mPath = Path()
         mPaint = Paint()
+
         mPaint?.isAntiAlias = true
         mPaint?.color = Color.BLACK
         mPaint?.style = Paint.Style.STROKE
         mPaint?.strokeJoin = Paint.Join.ROUND
+        mPaint?.strokeCap = Paint.Cap.ROUND
         mPaint?.strokeWidth = 4f
 
         this.setBackgroundColor(ResourcesCompat.getColor(context.resources, android.R.color.white, null))
@@ -57,9 +62,33 @@ open class SignatureView : View {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        if (mPath != null && mPaint != null) canvas.drawPath(mPath!!, mPaint!!)
+        if (mPath != null && mPaint != null) {
+            canvas.drawBitmap(mBitmap!!, 0F, 0F, bitmapPaint)
+            canvas.drawPath(mPath!!, mPaint!!)
+        }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        val x: Float = event.x
+        val y: Float = event.y
+
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> {
+                startTouch(x, y)
+                invalidate()
+            }
+            MotionEvent.ACTION_MOVE -> {
+                moveTouch(x, y)
+                invalidate()
+            }
+            MotionEvent.ACTION_UP -> {
+                upTouch()
+                invalidate()
+            }
+        }
+        return true
+    }
 
     //private functions
     private fun upTouch() {
@@ -99,16 +128,6 @@ open class SignatureView : View {
         return bitmap
     }
 
-    //public methods
-    fun signatureClear() {
-        clearCanvas()
-    }
-
-    fun isSignature(): Boolean {
-        return !mPath?.isEmpty!!
-    }
-
-    //OpenCV Methods
     private fun getImageFromBitmap(bitmap: Bitmap): Mat {
         val img = Mat()
         val bmp32: Bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
@@ -137,6 +156,48 @@ open class SignatureView : View {
         )
 
         return binary
+    }
+
+    //public methods
+    fun signatureClear() {
+        clearCanvas()
+    }
+
+    fun isSignature(): Boolean {
+        return !mPath?.isEmpty!!
+    }
+
+    fun setPathColor(color: Int) {
+        mPaint?.color = color
+    }
+
+    fun setWidth(with: Double) {
+        mWith = with
+    }
+
+    private fun calculateSize(image: Mat): org.opencv.core.Size {
+        val k = image.height().toDouble().div(image.width().toDouble())
+        return org.opencv.core.Size(mWith!!, mWith!! * k)
+    }
+
+    private fun setBackgroundToTransparent(bitmap: Bitmap): Bitmap {
+        val width = bitmap.width
+        val height = bitmap.height
+        val arrayResult = IntArray(height * width)
+
+        //get pixels array of original image
+        bitmap.getPixels(arrayResult, 0, width, 0, 0, width, height)
+
+        //change pixel color one by one
+        for (i in 0 until height * width) {
+            if (arrayResult[i] == Color.WHITE) arrayResult[i] = Color.TRANSPARENT
+            else arrayResult[i] = mPaint?.color!!
+        }
+
+        //copy original image
+        val resultBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        resultBitmap.setPixels(arrayResult, 0, width, 0, 0, width, height)
+        return resultBitmap
     }
 
     fun getSignatureBitmap(drawBoundingBox: Boolean = false): Bitmap? {
@@ -245,6 +306,12 @@ open class SignatureView : View {
             )
 
             val signatureImage = getRoiSignature(img, roiRect)
+            if (mWith != null && signatureImage.width().toDouble() > mWith!!) org.opencv.imgproc.Imgproc.resize(
+                signatureImage,
+                signatureImage,
+                calculateSize(signatureImage)
+            )
+
             val bitOutput: Bitmap = Bitmap.createBitmap(
                 signatureImage.cols(),
                 signatureImage.rows()
@@ -254,31 +321,10 @@ open class SignatureView : View {
             bitOutput.setHasAlpha(false)
 
             org.opencv.android.Utils.matToBitmap(signatureImage, bitOutput)
-            return bitOutput
+            if (drawBoundingBox) return bitOutput
+            return setBackgroundToTransparent(bitOutput)
         }
         return null
-    }
-
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-        val x: Float = event.x
-        val y: Float = event.y
-
-        when (event.action) {
-            MotionEvent.ACTION_DOWN -> {
-                startTouch(x, y)
-                invalidate()
-            }
-            MotionEvent.ACTION_MOVE -> {
-                moveTouch(x, y)
-                invalidate()
-            }
-            MotionEvent.ACTION_UP -> {
-                upTouch()
-                invalidate()
-            }
-        }
-        return true
     }
 
     companion object {
