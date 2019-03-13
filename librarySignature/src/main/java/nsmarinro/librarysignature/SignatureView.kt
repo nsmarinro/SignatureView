@@ -23,7 +23,7 @@ open class SignatureView : View {
     private var bitmapPaint: Paint? = null
     private var mX: Float = 0F
     private var mY: Float = 0F
-    private var mWith: Double? = null
+    private var mWidth: Double? = null
 
     constructor(context: Context) : super(context) {
         init()
@@ -171,13 +171,13 @@ open class SignatureView : View {
         mPaint?.color = color
     }
 
-    fun setWidth(with: Double) {
-        mWith = with
+    fun setWidth(width: Double) {
+        mWidth = width
     }
 
     private fun calculateSize(image: Mat): org.opencv.core.Size {
         val k = image.height().toDouble().div(image.width().toDouble())
-        return org.opencv.core.Size(mWith!!, mWith!! * k)
+        return org.opencv.core.Size(mWidth!!, mWidth!! * k)
     }
 
     private fun setBackgroundToTransparent(bitmap: Bitmap): Bitmap {
@@ -306,7 +306,7 @@ open class SignatureView : View {
             )
 
             val signatureImage = getRoiSignature(img, roiRect)
-            if (mWith != null && signatureImage.width().toDouble() > mWith!!) org.opencv.imgproc.Imgproc.resize(
+            if (mWidth != null && signatureImage.width().toDouble() > mWidth!!) org.opencv.imgproc.Imgproc.resize(
                 signatureImage,
                 signatureImage,
                 calculateSize(signatureImage)
