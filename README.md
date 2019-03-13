@@ -51,10 +51,10 @@ allprojects {
  ```getSignatureBitmap()``` - Get Signature without bounding box and transparent background(final signature)<br/>
  ```getSignatureBitmap(true)``` - Get Signature with bounding boxes and white background (draw the bounding boxes detected)<br/>
  ```isSignature()``` - if something is already drawn or not<br/>
- ```setPathColor(color: Int)``` - set color of signature<br/>
- ```setWidth(width: Double)``` - set the maximum width of the signature (the height is set proportionally of this width)<br/>
+ ```setPathColor(color)``` - Set signature color<br/>
+ ```setWidth(width)``` - Set the maximum width of the signature (the height is set proportionally of this width)<br/>
  
- Note: ```setWidth(width: Double)``` only take effect if the width of the signature is higher than this width
+ Note: ```setWidth(width)``` only take effect if the width of the signature is higher than this width
  
  
  ## License
