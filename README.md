@@ -2,7 +2,7 @@
 * Written in Kotlin
 * Written with OpenCV 3.4.3<br/> 
 * Provides the signature with the minimum bounding box.
-* Signature is returned in bitmap<br/>
+* Signature is returned in bitmap with transparent background<br/>
 
 <img align="center" width="283" height="448" src="https://user-images.githubusercontent.com/34654924/50117761-dad0cb80-021b-11e9-9267-68dc719295cd.jpeg" hspace="20"> <img align="center" width="283" height="448" src="https://user-images.githubusercontent.com/34654924/50117765-ddcbbc00-021b-11e9-8e42-8ae5f89133d2.jpeg"> 
 
@@ -48,9 +48,13 @@ allprojects {
  * Get signature data
  
  ```signatureClear()``` - Clear Signature<br/> 
- ```getSignatureBitmap()``` - Get Signature without bounding box (final signature)<br/>
- ```getSignatureBitmap(true)``` - Get Signature with bounding boxes (draw the bounding boxes detected)<br/>
-  ```isSignature()``` - if something is already drawn or not<br/>
+ ```getSignatureBitmap()``` - Get Signature without bounding box and transparent background(final signature)<br/>
+ ```getSignatureBitmap(true)``` - Get Signature with bounding boxes and white background (draw the bounding boxes detected)<br/>
+ ```isSignature()``` - if something is already drawn or not<br/>
+ ```setPathColor(color: Int)``` - set color of signature<br/>
+ ```setWidth(width: Double)``` - set the maximum width of the signature (the height is set proportionally of this width)<br/>
+ 
+ Note: ```setWidth(width: Double)``` only take effect if the width of the signature is higher than this width
  
  
  ## License
