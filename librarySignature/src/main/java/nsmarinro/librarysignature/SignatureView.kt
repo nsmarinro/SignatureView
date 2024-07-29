@@ -13,6 +13,7 @@ import org.opencv.core.Mat
 import org.opencv.core.MatOfPoint
 import org.opencv.imgproc.Imgproc
 import java.util.*
+import kotlin.math.abs
 
 open class SignatureView : View {
 
@@ -102,8 +103,8 @@ open class SignatureView : View {
     }
 
     private fun moveTouch(x: Float, y: Float) {
-        val dx: Float = Math.abs(x - mX)
-        val dy: Float = Math.abs(y - mY)
+        val dx: Float = abs(x - mX)
+        val dy: Float = abs(y - mY)
         if (dx >= TOLERANCE || dy >= TOLERANCE) {
             mPath?.quadTo(mX, mY, (x + mX) / 2, (y + mY) / 2)
             mX = x
@@ -163,7 +164,7 @@ open class SignatureView : View {
         clearCanvas()
     }
 
-    fun isSignature(): Boolean {
+    open fun isSignature(): Boolean {
         return mPath?.isEmpty?.not() ?: false
     }
 
