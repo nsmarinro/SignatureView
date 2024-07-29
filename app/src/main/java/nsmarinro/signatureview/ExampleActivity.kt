@@ -6,27 +6,30 @@ import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
-import kotlinx.android.synthetic.main.activity_example.*
+import nsmarinro.signatureview.databinding.ActivityExampleBinding
 import java.io.ByteArrayOutputStream
 
 class ExampleActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityExampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_example)
+        binding = ActivityExampleBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        signatureView.setPathColor(Color.BLACK)
-        signatureView.setWidth(200.0)
+        binding.signatureView.setPathColor(Color.BLACK)
+        binding.signatureView.setWidth(200.0)
 
-        buttonCancel.setOnClickListener {
-            signatureView.signatureClear()
+        binding.buttonCancel.setOnClickListener {
+            binding.signatureView.signatureClear()
         }
 
-        buttonDone.setOnClickListener {
-            val imageBitmap: Bitmap? = signatureView.getSignatureBitmap()
+        binding.buttonDone.setOnClickListener {
+            val imageBitmap: Bitmap? = binding.signatureView.getSignatureBitmap()
             if (imageBitmap != null) {
                 val imageFinal: ByteArray = bitmapToByteArray(imageBitmap)
-                val imageBoundingBox: ByteArray = bitmapToByteArray(signatureView.getSignatureBitmap(true)!!)
+                val imageBoundingBox: ByteArray = bitmapToByteArray(binding.signatureView.getSignatureBitmap(true)!!)
                 val stringImage = byteArrayToBase64(imageFinal)
                 val intent = Intent(this, ImageActivity::class.java)
                 intent.putExtra("imageFinal", imageFinal)

@@ -164,7 +164,7 @@ open class SignatureView : View {
     }
 
     fun isSignature(): Boolean {
-        return !mPath?.isEmpty!!
+        return mPath?.isEmpty?.not() ?: false
     }
 
     fun setPathColor(color: Int) {
@@ -272,10 +272,10 @@ open class SignatureView : View {
             }
 
             val mainRect = org.opencv.core.Rect(
-                x.min()!!.toInt(),
-                y.min()!!.toInt(),
-                x.max()!!.toInt() - x.min()!!.toInt(),
-                y.max()!!.toInt() - y.min()!!.toInt()
+                x.min().toInt(),
+                y.min().toInt(),
+                x.max().toInt() - x.min().toInt(),
+                y.max().toInt() - y.min().toInt()
             )
 
             if (drawBoundingBox) {
@@ -306,7 +306,7 @@ open class SignatureView : View {
             )
 
             val signatureImage = getRoiSignature(img, roiRect)
-            if (mWidth != null && signatureImage.width().toDouble() > mWidth!!) org.opencv.imgproc.Imgproc.resize(
+            if (mWidth != null && signatureImage.width().toDouble() > mWidth!!) Imgproc.resize(
                 signatureImage,
                 signatureImage,
                 calculateSize(signatureImage)
