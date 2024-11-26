@@ -1,0 +1,3 @@
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/Debug/w214f397/arm64-v8a/CMakeFiles/opencv_jni_shared.dir
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/Debug/w214f397/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/Debug/w214f397/arm64-v8a/CMakeFiles/rebuild_cache.dir

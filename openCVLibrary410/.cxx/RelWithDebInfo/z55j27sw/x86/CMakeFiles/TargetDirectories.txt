@@ -1,0 +1,3 @@
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/RelWithDebInfo/z55j27sw/x86/CMakeFiles/opencv_jni_shared.dir
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/RelWithDebInfo/z55j27sw/x86/CMakeFiles/edit_cache.dir
+C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/RelWithDebInfo/z55j27sw/x86/CMakeFiles/rebuild_cache.dir
