@@ -3,14 +3,13 @@ package nsmarinro.signatureview
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import nsmarinro.signatureview.databinding.ActivityExampleBinding
 import java.io.ByteArrayOutputStream
 
 class ExampleActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityExampleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,18 +27,24 @@ class ExampleActivity : AppCompatActivity() {
         binding.buttonDone.setOnClickListener {
             val imageBitmap: Bitmap? = binding.signatureView.getSignatureBitmap()
             if (imageBitmap != null) {
-                val imageFinal: ByteArray = bitmapToByteArray(imageBitmap)
-                val imageBoundingBox: ByteArray = bitmapToByteArray(binding.signatureView.getSignatureBitmap(true)!!)
+                val imageFinal = bitmapToByteArray(imageBitmap)
+                val imageBoundingBox =
+                    bitmapToByteArray(
+                        binding.signatureView.getSignatureBitmap(true),
+                    )
                 val stringImage = byteArrayToBase64(imageFinal)
-                val intent = Intent(this, ImageActivity::class.java)
-                intent.putExtra("imageFinal", imageFinal)
-                intent.putExtra("imageBoundingBox", imageBoundingBox)
-                startActivity(intent)
+
+                Intent(this, ImageActivity::class.java)
+                    .apply {
+                        this.putExtra("imageFinal", imageFinal)
+                        this.putExtra("imageBoundingBox", imageBoundingBox)
+                    }.also { intent -> startActivity(intent) }
             }
         }
     }
 
-    private fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
+    private fun bitmapToByteArray(bitmap: Bitmap?): ByteArray? {
+        if (bitmap == null) return null
         val stream = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
         return stream.toByteArray()
@@ -49,5 +54,4 @@ class ExampleActivity : AppCompatActivity() {
         if (byteArray == null) return ""
         return Base64.encodeToString(byteArray, Base64.DEFAULT)
     }
-
 }

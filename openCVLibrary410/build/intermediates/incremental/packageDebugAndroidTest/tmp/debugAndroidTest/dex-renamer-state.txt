@@ -1,0 +1,10 @@
+#Tue Nov 26 13:37:48 COT 2024
+base.0=C\:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\build\\intermediates\\dex\\debugAndroidTest\\mergeLibDexDebugAndroidTest\\0\\classes.dex
+base.1=C\:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\2\\classes.dex
+path.0=0/classes.dex
+path.1=0/classes.dex
+path.2=2/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

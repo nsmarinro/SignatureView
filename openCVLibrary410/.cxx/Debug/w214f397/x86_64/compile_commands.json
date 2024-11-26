@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/nsmar/OneDrive/Documentos/GitHub/SignatureView/openCVLibrary410/.cxx/Debug/w214f397/x86_64",
+  "command": "C:\\Users\\nsmar\\AppData\\Local\\Android\\Sdk\\ndk\\27.0.12077973\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android21 --sysroot=C:/Users/nsmar/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\opencv_jni_shared.dir\\dummy.cpp.o -c C:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\libcxx_helper\\dummy.cpp",
+  "file": "C:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\libcxx_helper\\dummy.cpp"
+}
+]

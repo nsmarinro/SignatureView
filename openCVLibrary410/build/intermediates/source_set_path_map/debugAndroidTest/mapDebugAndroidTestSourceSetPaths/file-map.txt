@@ -1,0 +1,5 @@
+org.opencv.test.openCVLibrary410-androidTest-0 C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\build\generated\res\resValues\androidTest\debug
+org.opencv.test.openCVLibrary410-mergeDebugAndroidTestResources-1 C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+org.opencv.test.openCVLibrary410-mergeDebugAndroidTestResources-2 C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+org.opencv.test.openCVLibrary410-debugAndroidTest-3 C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+org.opencv.test.openCVLibrary410-debug-4 C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\build\intermediates\packaged_res\debug\packageDebugResources

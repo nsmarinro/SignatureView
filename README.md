@@ -1,6 +1,6 @@
 # Android Library Signature View
 * Written in Kotlin
-* Written with OpenCV 3.4.3<br/> 
+* Written with OpenCV 4.10.0<br/> 
 * Provides the signature with the minimum bounding box.
 * Signature is returned in bitmap with transparent background<br/>
 
@@ -10,7 +10,7 @@
 You are free for make any improvement. Please share your code.
 
 ## Getting Started
-This Library was developed for minSdkVersion 21 and targetSdkVersion 28 (for now)
+This Library was developed for minSdkVersion 21 and targetSdkVersion 34 (for now)
 
 ### Installing
 

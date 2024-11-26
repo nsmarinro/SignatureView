@@ -1,0 +1,17 @@
+{
+  "installationFolder": "C:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\build\\intermediates\\prefab_package\\release\\prefab",
+  "gradlePath": ":openCVLibrary410",
+  "packageInfo": {
+    "packageName": "openCVLibrary410",
+    "packageSchemaVersion": 2,
+    "packageDependencies": [],
+    "modules": [
+      {
+        "moduleName": "opencv_jni_shared",
+        "moduleHeaders": "C:\\Users\\nsmar\\OneDrive\\Documentos\\GitHub\\SignatureView\\openCVLibrary410\\native\\jni\\include",
+        "moduleExportLibraries": [],
+        "abis": []
+      }
+    ]
+  }
+}

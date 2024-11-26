@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\nsmar\OneDrive\Documentos\GitHub\SignatureView\openCVLibrary410\.cxx\Debug\w214f397\arm64-v8a'
+ninja: no work to do.
